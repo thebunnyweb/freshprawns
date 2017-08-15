@@ -1,0 +1,65 @@
+@import '../../styles/mixins';
+section#header {
+    position: relative;
+    background: url('../assets/headerbg.jpg') no-repeat;
+    background-size: 100%;
+    &::after {
+        content: "";
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        background: rgba(0, 0, 0, .6);
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+    .jumbotron {
+        background: transparent;
+        position: relative;
+        z-index: 9;
+        margin-bottom: 0;
+    }
+    .title {
+        span {
+            @include font(18px,
+            400,
+            #fefefe)
+        }
+        a {
+            @include font(18px,
+            400,
+            #fefefe);
+            display: inline-block;
+            margin-left: 20px;
+            cursor: pointer;
+            transition: all .3s ease;
+            &:hover {
+                opacity: .6;
+                text-decoration: none;
+            }
+        }
+        margin-bottom: 25px;
+    }
+    span,
+    a {
+        @include font(13px,
+        400,
+        #fefefe);
+    }
+    ul {
+        padding-left: 0;
+        list-style-type: none;
+    }
+    ul li {
+        display: inline-block;
+        margin-right: 20px;
+    }
+    ul li a {
+        transition: all .3s ease;
+        cursor: pointer;
+        &:hover {
+            opacity: .6;
+            text-decoration: none;
+        }
+    }
+}
